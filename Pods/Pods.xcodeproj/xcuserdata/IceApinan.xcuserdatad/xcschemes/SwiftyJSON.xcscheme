@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F64ADAC01F4945D000CFCCFE"
-               BuildableName = "VirtualTourist.app"
-               BlueprintName = "VirtualTourist"
-               ReferencedContainer = "container:VirtualTourist.xcodeproj">
+               BlueprintIdentifier = "8E0FCE818CC301215841C684D458965C"
+               BuildableName = "SwiftyJSON.framework"
+               BlueprintName = "SwiftyJSON"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -30,15 +30,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F64ADAC01F4945D000CFCCFE"
-            BuildableName = "VirtualTourist.app"
-            BlueprintName = "VirtualTourist"
-            ReferencedContainer = "container:VirtualTourist.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -53,16 +44,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F64ADAC01F4945D000CFCCFE"
-            BuildableName = "VirtualTourist.app"
-            BlueprintName = "VirtualTourist"
-            ReferencedContainer = "container:VirtualTourist.xcodeproj">
+            BlueprintIdentifier = "8E0FCE818CC301215841C684D458965C"
+            BuildableName = "SwiftyJSON.framework"
+            BlueprintName = "SwiftyJSON"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -72,16 +62,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F64ADAC01F4945D000CFCCFE"
-            BuildableName = "VirtualTourist.app"
-            BlueprintName = "VirtualTourist"
-            ReferencedContainer = "container:VirtualTourist.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
