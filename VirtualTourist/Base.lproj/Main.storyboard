@@ -65,7 +65,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-BJ-zRV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-BJ-zRV" userLabel="Action Button">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gVb-nC-Osa"/>
@@ -73,7 +73,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="New Collection"/>
                                 <connections>
-                                    <action selector="newCollectionPressed:" destination="kos-MB-e9z" eventType="touchUpInside" id="bra-TT-NRL"/>
+                                    <action selector="actionButtonTapped:" destination="kos-MB-e9z" eventType="touchUpInside" id="wUV-5o-GX5"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="74N-Vm-Sgt">
@@ -99,7 +99,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4bp-m6-FIn">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="4bp-m6-FIn">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 </imageView>
                                                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0Hd-gL-hRn">
@@ -124,6 +124,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This pin has no images." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GN-W5-Eap" userLabel="noImagesLabel">
+                                <rect key="frame" x="85.5" y="307" width="203.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -132,18 +138,21 @@
                             <constraint firstItem="ofa-BJ-zRV" firstAttribute="leading" secondItem="S0N-WH-lG4" secondAttribute="leading" id="Hln-uK-qFJ"/>
                             <constraint firstItem="g1E-hL-2D5" firstAttribute="top" secondItem="IN0-Fo-rOZ" secondAttribute="bottom" constant="122" id="K0J-V1-hVi"/>
                             <constraint firstItem="74N-Vm-Sgt" firstAttribute="leading" secondItem="S0N-WH-lG4" secondAttribute="leading" id="Rgv-MZ-yN3"/>
+                            <constraint firstItem="6GN-W5-Eap" firstAttribute="top" secondItem="74N-Vm-Sgt" secondAttribute="bottom" constant="120" id="TOV-bl-5TN"/>
                             <constraint firstItem="74N-Vm-Sgt" firstAttribute="leading" secondItem="g1E-hL-2D5" secondAttribute="leading" id="UDN-9T-CwE"/>
                             <constraint firstItem="74N-Vm-Sgt" firstAttribute="top" secondItem="IN0-Fo-rOZ" secondAttribute="bottom" id="ci1-cu-TjY"/>
                             <constraint firstAttribute="trailing" secondItem="74N-Vm-Sgt" secondAttribute="trailing" id="cwa-r7-mDg"/>
+                            <constraint firstItem="6GN-W5-Eap" firstAttribute="centerX" secondItem="S0N-WH-lG4" secondAttribute="centerX" id="gc4-Yo-f6w"/>
                             <constraint firstItem="ofa-BJ-zRV" firstAttribute="top" secondItem="g1E-hL-2D5" secondAttribute="bottom" constant="8" symbolic="YES" id="jG2-pn-JNu"/>
                             <constraint firstAttribute="trailing" secondItem="ofa-BJ-zRV" secondAttribute="trailing" id="xL6-V6-ns6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="actionButton" destination="ofa-BJ-zRV" id="kfT-GA-oae"/>
                         <outlet property="collectionView" destination="g1E-hL-2D5" id="xPX-tQ-NNp"/>
                         <outlet property="flowLayout" destination="9YV-cW-RPg" id="RuW-qP-9gm"/>
                         <outlet property="mapView" destination="74N-Vm-Sgt" id="mLu-p6-pKV"/>
-                        <outlet property="newCollectionButton" destination="ofa-BJ-zRV" id="Sgj-PP-WDM"/>
+                        <outlet property="noImagesLabel" destination="6GN-W5-Eap" id="KgR-e0-0Xu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbm-LZ-SgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,4 +176,7 @@
             <point key="canvasLocation" x="-326" y="1"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder" width="500" height="500"/>
+    </resources>
 </document>

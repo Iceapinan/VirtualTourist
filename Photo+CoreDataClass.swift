@@ -22,13 +22,4 @@ public class Photo: NSManagedObject {
         }
     }
     
-    convenience init(photo: NSData, context: NSManagedObjectContext) {
-        if let entity = NSEntityDescription.entity(forEntityName: "Photo", in: context) {
-            self.init(entity: entity, insertInto: context)
-            self.photo = photo
-        } else {
-            fatalError("Unable to find Entity name!")
-        }
-    }
-    
 }

@@ -12,7 +12,6 @@ import CoreData
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
-    var pins = [Pin]()
     var shouldDelete = false
     
     override func viewDidLoad() {
@@ -21,6 +20,7 @@ class MapViewController: UIViewController {
         setMapRegion()
         let request : NSFetchRequest<Pin> = Pin.fetchRequest()
         do {
+            var pins = [Pin]()
             pins = try AppDelegate.stack.context.fetch(request)
             for pin in pins {
              addAnnotationToMapView(latitude: pin.latitude, longitude: pin.longitude)
@@ -124,6 +124,7 @@ extension MapViewController: MKMapViewDelegate {
                     AppDelegate.stack.save()
                 } else {
                 performSegue(withIdentifier: "showDetailVC", sender: pin)
+                mapView.deselectAnnotation(view.annotation, animated: false)
             }
         }
             

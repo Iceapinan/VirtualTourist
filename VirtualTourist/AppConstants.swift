@@ -11,6 +11,7 @@ import Foundation
 struct AppConstants {
     
     static let maximumPhotosPerPage = 36
+    static let fcSortDescriptorKey = "url"
     
     // MARK: Flickr
     struct Flickr {
